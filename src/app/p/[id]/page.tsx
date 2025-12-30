@@ -52,7 +52,9 @@ export default async function PastePage(
         )}
         {paste.expires_at && (
           <p>
-            Expires at: {new Date(paste.expires_at).toLocaleString()}
+            Expires at: {new Date(paste.expires_at).toLocaleString("en-IN", {
+            timeZone: "Asia/Kolkata"
+            })}
           </p>
         )}
       </div>
